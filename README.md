@@ -1,4 +1,13 @@
 
+## References
+This project utilizes the following ROS packages, cloned all of them on July 14, 2018.
+
+[gmapping](http://wiki.ros.org/gmapping)
+[turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)
+[turtlebot_rviz_launchers](http://wiki.ros.org/turtlebot_rviz_launchers)
+[turtlebot_gazebo](http://wiki.ros.org/turtlebot_gazebo)
+
+
 ## Package Tree
 ```
     ├──                                # Official ROS packages
@@ -44,14 +53,14 @@ Create launch.sh file with the following content
 #!/bin/sh
 xterm  -e  " gazebo " &
 sleep 5
-xterm  -e  " source /opt/ros/kinetic/setup.bash; roscore" & 
+xterm  -e  " source /opt/ros/kinetic/setup.bash; roscore" &
 sleep 5
 xterm  -e  " rosrun rviz rviz"
 ```
 
 ## Install Packages
 ```
-TODO ADD $ EXCEPT #  
+TODO ADD $ EXCEPT #
 $
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
