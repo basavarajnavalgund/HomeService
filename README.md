@@ -63,7 +63,7 @@ $ chmod +x ~/catkin_ws/src/launch.sh
 ```
 Run launch.sh to test Gazebo and RViz are working.
 ```
-~/catkin_ws/src/launch.sh
+$ ~/catkin_ws/src/launch.sh
 ```
 
 ## Install Packages
@@ -125,7 +125,7 @@ $ chmod +x ~/catkin_ws/src/test_slam.sh
 ```
 Run test_slam.sh to test slam is working, it requires manual movement of the robot.
 ```
-~/catkin_ws/src/test_slam.sh
+$ ~/catkin_ws/src/test_slam.sh
 ```
 
 ## Wall Follower
@@ -135,7 +135,7 @@ $ chmod +x ~/catkin_ws/src/wall_follower.sh
 ```
 Run wall_follower.sh to autonomously navigate and create map.
 ```
-~/catkin_ws/src/wall_follower.sh
+$ ~/catkin_ws/src/wall_follower.sh
 ```
 ## Test Navigation
 Sending map_file parameter caused file not found error. Therefore, amcl_demo.launch file changed to accept uamp.yaml file as the default map.
@@ -150,5 +150,16 @@ $ chmod +x ~/catkin_ws/src/test_navigation.sh
 
 Run test_navigation.sh to test navigation is working.
 ```
-~/catkin_ws/src/test_navigation.sh
+$ ~/catkin_ws/src/test_navigation.sh
+```
+
+## Pick Objects
+Needs to have run permissions.
+```
+$ chmod +x src/pick_objects.sh
+```
+Run pick_objects.sh to run two step navigation.
+
+```
+$ ./src/pick_objects.sh
 ```
