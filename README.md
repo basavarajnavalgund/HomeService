@@ -57,6 +57,14 @@ xterm  -e  " source /opt/ros/kinetic/setup.bash; roscore" &
 sleep 5
 xterm  -e  " rosrun rviz rviz"
 ```
+Needs to have run permissions.
+```
+$ chmod +x ~/catkin_ws/src/launch.sh
+```
+Run launch.sh to test Gazebo and RViz are working.
+```
+~/catkin_ws/src/launch.sh
+```
 
 ## Install Packages
 ```
@@ -110,4 +118,37 @@ sleep 3
 xterm  -e  " roslaunch turtlebot_rviz_launchers view_navigation.launch " &
 sleep 3
 xterm  -e  " roslaunch turtlebot_teleop keyboard_teleop.launch "
+```
+Needs to have run permissions.
+```
+$ chmod +x ~/catkin_ws/src/test_slam.sh
+```
+Run test_slam.sh to test slam is working, it requires manual movement of the robot.
+```
+~/catkin_ws/src/test_slam.sh
+```
+
+## Wall Follower
+Needs to have run permissions.
+```
+$ chmod +x ~/catkin_ws/src/wall_follower.sh
+```
+Run wall_follower.sh to autonomously navigate and create map.
+```
+~/catkin_ws/src/wall_follower.sh
+```
+## Test Navigation
+Sending map_file parameter caused file not found error. Therefore, amcl_demo.launch file changed to accept uamp.yaml file as the default map.
+```
+$ roslaunch turtlebot_gazebo amcl_demo.launch map_file:=~/catkin_ws/src/worlds/umap.yaml
+```
+
+Needs to have run permissions.
+```
+$ chmod +x ~/catkin_ws/src/test_navigation.sh
+```
+
+Run test_navigation.sh to test navigation is working.
+```
+~/catkin_ws/src/test_navigation.sh
 ```
