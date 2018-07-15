@@ -163,3 +163,15 @@ Run pick_objects.sh to run two step navigation.
 ```
 $ ./src/pick_objects.sh
 ```
+
+## Add Markers
+Needs to have run permissions.
+```
+$ chmod +x src/add_markers.sh
+```
+Run add_markers.sh to add and remove a marker on the pick up and drop off locations.
+
+```
+$ ./src/add_markers.sh
+```
+
