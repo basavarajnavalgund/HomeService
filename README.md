@@ -1,3 +1,14 @@
+# Home Service Robot
+
+[//]: # (Image References)
+
+[map]: ./images/umap.png "Map of U World"
+[t1gaz]: ./images/t1gz.png "At Pickup Location Gazebo"
+[t2gaz]: ./images/t2gz.png "At Drop Off Location Gazebo"
+[st]: ./images/st.png "Start RViz"
+[t1p1]: ./images/t1p1.png "At Pickup Location Before Picking up RViz"
+[t1p2]: ./images/t1p1.png "At Pickup Location After Picking up RViz"
+[t1d]: ./images/t1d.png "At Drop off Location RViz"
 
 ## References
 This project utilizes the following ROS packages, cloned all of them on July 14, 2018.
@@ -161,7 +172,7 @@ $ chmod +x src/pick_objects.sh
 Run pick_objects.sh to run two step navigation.
 
 ```
-$ ./src/pick_objects.sh
+$ ~/catkin_ws/src/pick_objects.sh
 ```
 
 ## Add Markers
@@ -172,6 +183,39 @@ $ chmod +x src/add_markers.sh
 Run add_markers.sh to add and remove a marker on the pick up and drop off locations.
 
 ```
-$ ./src/add_markers.sh
+$ ~/catkin_ws/src/add_markers.sh
 ```
+Note: The last version works but not as the Project part 11 Modeling Virtual Objects, since the logic has changed, the robot is required to reach to the marker to continue. 
+
+## Home Service
+Needs to have run permissions.
+```
+$ chmod +x src/home_service.sh
+```
+
+Run home_service.sh to pick and drop marker to specified locations.
+```
+$ ~/catkin_ws/src/home_service.sh
+```
+
+## Results  
+### Map  
+
+![alt text][map]
+
+### Start  
+![alt text][st]
+
+### Pickup  
+![alt text][t1p1]  
+
+![alt text][t1p2]  
+
+![alt text][t1gaz]
+
+### Drop off  
+![alt text][t1d]  
+
+![alt text][t2gaz]
+
 
