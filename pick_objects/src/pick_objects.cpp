@@ -24,8 +24,8 @@ int main(int argc, char** argv){
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 5.0;
-  goal.target_pose.pose.position.y = 0.0;
+  goal.target_pose.pose.position.x = 4.0;
+  goal.target_pose.pose.position.y = 6.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
    // Send the goal position and orientation for the robot to reach
@@ -43,6 +43,7 @@ int main(int argc, char** argv){
   }
   else {
     ROS_INFO("The robot failed to reach to the pick location, exiting");
+    ros::Duration(5.0).sleep();
     return 0;
   }
 
@@ -53,9 +54,9 @@ int main(int argc, char** argv){
   drop_goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  drop_goal.target_pose.pose.position.x = -2.0;
-  drop_goal.target_pose.pose.position.y = 1.0;
-  drop_goal.target_pose.pose.orientation.w = 0.5;
+  drop_goal.target_pose.pose.position.x = -4.0;
+  drop_goal.target_pose.pose.position.y = 6.0;
+  drop_goal.target_pose.pose.orientation.w = -0.5;
 
    // Send the goal position and orientation for the robot to reach
   ROS_INFO("Sending goal for drop location");
@@ -69,6 +70,6 @@ int main(int argc, char** argv){
     ROS_INFO("SUCCESS, the robot reached to the drop off location, exiting");
   else
     ROS_INFO("The robot failed to reach to the drop off location, exiting");
-
+  ros::Duration(5.0).sleep();
   return 0;
 }
