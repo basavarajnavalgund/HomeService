@@ -7,7 +7,7 @@
 [t2gaz]: ./images/t2gz.png "At Drop Off Location Gazebo"
 [st]: ./images/st.png "Start RViz"
 [t1p1]: ./images/t1p1.png "At Pickup Location Before Picking up RViz"
-[t1p2]: ./images/t1p1.png "At Pickup Location After Picking up RViz"
+[t1p2]: ./images/t1p2.png "At Pickup Location After Picking up RViz"
 [t1d]: ./images/t1d.png "At Drop off Location RViz"
 
 ## References
@@ -207,15 +207,24 @@ $ ~/catkin_ws/src/home_service.sh
 ![alt text][st]
 
 ### Pickup  
+
+At Pickup Location Before Picking up RViz  
+
 ![alt text][t1p1]  
 
+At Pickup Location After Picking up RViz  
+
 ![alt text][t1p2]  
+
+At Pickup Location Gazebo  
 
 ![alt text][t1gaz]
 
 ### Drop off  
+
+At Drop off Location RViz  
+
 ![alt text][t1d]  
 
+At Drop Off Location Gazebo
 ![alt text][t2gaz]
-
-
